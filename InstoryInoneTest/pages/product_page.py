@@ -11,7 +11,7 @@ class ProductPage(BasePage):
     TEMPLATE = (By.CSS_SELECTOR, '.btn-select[template-id="89"]')
     NOTIFICATION_POPUP = (By.CSS_SELECTOR, '#inline-select-notification .inline-select-notification-confirm')
     AFTER_POSITION = (By.CSS_SELECTOR, '#select-element-menu li.append-after')
-    SAVE_BUTTON = (By.CSS_SELECTOR, '#save[class="in-button-wrapper qa-button w-1 in-button-wrapper_fourth-secondary bor-r-0 bor-n h-1 w-13-s f-w-700 t-a-c t-t-u t-c-4"]')
+    SAVE_BUTTON = (By.XPATH, '//*[@id="save"][not(contains(@class, "in-button-wrapper_fourth-disabled"))]')
 
     PAGE_RULES = (By.CSS_SELECTOR, '.page-rules.qa-page-rules')
     RULE_DROPDOWN = (By.ID, 'conditionList0')
@@ -21,7 +21,7 @@ class ProductPage(BasePage):
     ALL_LANGUAGE = (By.CSS_SELECTOR, '.option__0.personalization-language-all-languages.option_active')
     NEVER_ENDS = (By.CSS_SELECTOR, '[for="Never Ends"]')
     CAMPAIGN_TEST_STATUS = (By.CSS_SELECTOR, '[for="Test"]')
-    ADVANCED_SETTINGS = (By.XPATH, '//*[@id="page"]/div/div[2]/div[2]/div/div[2]/div[2]/div[1]/div[4]/a')
+    ADVANCED_SETTINGS = (By.XPATH, '(//div[contains(@class, "in-accordion-wrapper__toggle")])[2]')
     PRIORITY_DROPDOWN = (By.XPATH, '//*[@id="priority"]')
     PRIORITY_OPTION = (By.CSS_SELECTOR, 'a.priority-1')
     NOTE = (By.ID, 'note')
